@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/BingSiteAuth\\.xml",
+      "dest": "/api/bing"
+    },
+    {
+      "src": "/google(?<token>[a-zA-Z0-9_-]+)\\.html",
+      "dest": "/api/google?token=$token"
+    },
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(favicon\\.ico|vite\\.svg|robots\\.txt)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/render"
+    }
+  ]
+}

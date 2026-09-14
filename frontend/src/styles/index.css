@@ -1,0 +1,309 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-teal: #0F6265;
+  --color-teal-dark: #094749;
+  --color-teal-deep: #063335;
+  --color-teal-light: #178589;
+  --color-coral: #F43F5E;
+  --color-coral-accent: #FF6B6B;
+  --color-surface: #FCFDFD;
+  --color-border: #E2E8F0;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Accent Card Hover Lift */
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -10px rgba(15, 98, 101, 0.12);
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Print Optimization */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Rich Text Editor (Quill) Overrides */
+.rich-text-editor .ql-toolbar {
+  border-radius: 1rem 1rem 0 0;
+  border-color: #E2E8F0;
+  background: #F8FAFC;
+}
+
+.rich-text-editor .ql-container {
+  border-radius: 0 0 1rem 1rem;
+  border-color: #E2E8F0;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+  min-height: 320px;
+}
+
+.rich-text-editor .ql-editor {
+  min-height: 320px;
+  line-height: 1.85;
+  color: #334155;
+  padding: 1.5rem;
+}
+
+.rich-text-editor .ql-editor h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #094749;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.rich-text-editor .ql-editor h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #094749;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.rich-text-editor .ql-editor h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F6265;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rich-text-editor .ql-editor blockquote {
+  border-left: 4px solid #F43F5E;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #475569;
+  font-style: italic;
+  background: #FFF1F2;
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.rich-text-editor .ql-editor a {
+  color: #0F6265;
+  text-decoration: underline;
+}
+
+.rich-text-editor .ql-snow .ql-stroke {
+  stroke: #475569;
+}
+
+.rich-text-editor .ql-snow .ql-fill {
+  fill: #475569;
+}
+
+.rich-text-editor .ql-snow .ql-picker {
+  color: #475569;
+}
+
+.rich-text-editor .ql-snow button:hover .ql-stroke,
+.rich-text-editor .ql-snow .ql-picker-label:hover .ql-stroke {
+  stroke: #0F6265;
+}
+
+.rich-text-editor .ql-snow button:hover .ql-fill,
+.rich-text-editor .ql-snow .ql-picker-label:hover .ql-fill {
+  fill: #0F6265;
+}
+
+.rich-text-editor .ql-snow button.ql-active .ql-stroke {
+  stroke: #0F6265;
+}
+
+.rich-text-editor .ql-snow button.ql-active .ql-fill {
+  fill: #0F6265;
+}
+
+/* ==========================================================================
+   Public Article & Supplement Content Typography (Prose & Headings)
+   ========================================================================== */
+.prose,
+.supplement-description,
+.article-content {
+  color: #334155;
+  line-height: 1.85;
+}
+
+.prose h1,
+.supplement-description h1,
+.article-content h1 {
+  font-size: 1.875rem !important; /* 30px */
+  line-height: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #094749 !important;
+  letter-spacing: -0.025em;
+  margin-top: 2rem !important;
+  margin-bottom: 0.875rem !important;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  display: block !important;
+}
+
+.prose h2,
+.supplement-description h2,
+.article-content h2 {
+  font-size: 1.5rem !important; /* 24px */
+  line-height: 2rem !important;
+  font-weight: 800 !important;
+  color: #094749 !important;
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem !important;
+  margin-bottom: 0.875rem !important;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  display: block !important;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+}
+
+.prose h3,
+.supplement-description h3,
+.article-content h3 {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.75rem !important;
+  font-weight: 700 !important;
+  color: #0F6265 !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.5rem !important;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  display: block !important;
+}
+
+.prose h4,
+.supplement-description h4,
+.article-content h4 {
+  font-size: 1.125rem !important; /* 18px */
+  line-height: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #0F6265 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  display: block !important;
+}
+
+.prose p,
+.supplement-description p,
+.article-content p {
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.125rem !important;
+  line-height: 1.85 !important;
+  color: #475569 !important;
+  font-size: 0.9375rem !important; /* 15px */
+}
+
+@media (min-width: 640px) {
+  .prose p,
+  .supplement-description p,
+  .article-content p {
+    font-size: 1rem !important; /* 16px */
+  }
+}
+
+.prose strong,
+.prose b,
+.supplement-description strong,
+.supplement-description b,
+.article-content strong,
+.article-content b {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.prose em,
+.prose i,
+.supplement-description em,
+.supplement-description i,
+.article-content em,
+.article-content i {
+  font-style: italic !important;
+}
+
+.prose ul,
+.supplement-description ul,
+.article-content ul {
+  list-style-type: disc !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose ol,
+.supplement-description ol,
+.article-content ol {
+  list-style-type: decimal !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose li,
+.supplement-description li,
+.article-content li {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.35rem !important;
+  color: #475569 !important;
+  line-height: 1.7 !important;
+}
+
+.prose blockquote,
+.supplement-description blockquote,
+.article-content blockquote {
+  border-left: 4px solid #0F6265 !important;
+  background-color: #F0FDF4 !important;
+  padding: 0.75rem 1rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  color: #166534 !important;
+  font-style: italic !important;
+}
+
+.prose a,
+.supplement-description a,
+.article-content a {
+  color: #0F6265 !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+
