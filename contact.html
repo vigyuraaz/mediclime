@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Clinical Team | Mediclime</title>
+  <meta name="description" content="Contact the Mediclime medical editorial board and research team."/>
+  <meta name="theme-color" content="#0F6265"/>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS v3 via CDN with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#0F6265',
+              'teal-dark': '#094749',
+              'teal-deep': '#063335',
+              'teal-light': '#178589',
+              'teal-soft': '#E6F4F4',
+              coral: '#F43F5E',
+              'coral-accent': '#FF6B6B',
+              'coral-soft': '#FFF1F2',
+              'slate-bg': '#F8FAFC',
+              'card-border': '#E2E8F0',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <script>
+    if (!window.location.hash) {
+      window.location.hash = '#/contact' + window.location.search;
+    }
+  </script>
+</head>
+<body class="bg-[#FCFDFD] text-slate-800 antialiased selection:bg-rose-100 selection:text-rose-700 min-h-screen flex flex-col">
+  <div id="app" class="flex-1 flex flex-col"></div>
+
+  <!-- Data Layer Scripts -->
+  <script src="assets/js/data/authors.js"></script>
+  <script src="assets/js/data/conditions.js"></script>
+  <script src="assets/js/data/products.js"></script>
+  <script src="assets/js/data/articles.js"></script>
+  <script src="assets/js/data/faqs.js"></script>
+
+  <!-- Reusable UI Components -->
+  <script src="assets/js/components/Toast.js"></script>
+  <script src="assets/js/components/Header.js"></script>
+  <script src="assets/js/components/Footer.js"></script>
+  <script src="assets/js/components/ArticleCard.js"></script>
+  <script src="assets/js/components/ProductCard.js"></script>
+  <script src="assets/js/components/ConditionCard.js"></script>
+  <script src="assets/js/components/CategoryPills.js"></script>
+  <script src="assets/js/components/ComparisonMatrix.js"></script>
+  <script src="assets/js/components/SearchModal.js"></script>
+
+  <!-- Page Templates -->
+  <script src="assets/js/pages/HomePage.js"></script>
+  <script src="assets/js/pages/ArticlesPage.js"></script>
+  <script src="assets/js/pages/ArticleDetailPage.js"></script>
+  <script src="assets/js/pages/ConditionsPage.js"></script>
+  <script src="assets/js/pages/ConditionDetailPage.js"></script>
+  <script src="assets/js/pages/SupplementsPage.js"></script>
+  <script src="assets/js/pages/SupplementDetailPage.js"></script>
+  <script src="assets/js/pages/ComparePage.js"></script>
+  <script src="assets/js/pages/AuthorsPage.js"></script>
+  <script src="assets/js/pages/AuthorDetailPage.js"></script>
+  <script src="assets/js/pages/SearchPage.js"></script>
+  <script src="assets/js/pages/AboutPage.js"></script>
+  <script src="assets/js/pages/ContactPage.js"></script>
+  <script src="assets/js/pages/FAQPage.js"></script>
+  <script src="assets/js/pages/LegalPage.js"></script>
+  <script src="assets/js/pages/NotFoundPage.js"></script>
+
+  <!-- Router & Application Controller -->
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

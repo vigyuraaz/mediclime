@@ -1,0 +1,21 @@
+{
+  "name": "mediclime-medical-blog-supplements",
+  "version": "1.0.0",
+  "description": "Production-quality medical blog & supplements publication platform built from clinical wellness editorial design system.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -p 3000 .",
+    "start": "npx serve -p 3000 .",
+    "check": "node --check assets/js/app.js && node --check assets/js/router.js && node --check assets/js/data/articles.js && node --check assets/js/data/products.js && node --check assets/js/data/conditions.js && node --check assets/js/data/authors.js && node --check assets/js/data/faqs.js"
+  },
+  "keywords": [
+    "medical-blog",
+    "supplements",
+    "neuropathy",
+    "health",
+    "clinical",
+    "editorial"
+  ],
+  "author": "Mediclime Health Media",
+  "license": "ISC"
+}
